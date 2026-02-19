@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Incredible India Travel Blog</title>
+
+<style>
+body{
+    margin:0;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* NAVBAR */
+.navbar{
+    background:#0b3d91;
+    color:white;
+    display:flex;
+    justify-content:space-between;
+    padding:15px 40px;
+    align-items:center;
+}
+
+.navbar ul{
+    list-style:none;
+    display:flex;
+    gap:20px;
+}
+
+.navbar a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.navbar a:hover{
+    color:yellow;
+}
+
+/* HERO */
+.hero{
+    height:80vh;
+    background:url("https://images.unsplash.com/photo-1524492412937-b28074a5d7da") center/cover;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-direction:column;
+    color:white;
+    text-shadow:2px 2px 10px black;
+}
+
+/* CITY PAGE */
+.city{
+    display:none;
+    padding:30px;
+    text-align:center;
+}
+
+.city img{
+    width:80%;
+    border-radius:15px;
+    margin:20px 0;
+}
+
+/* HOME CARDS */
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    margin:30px;
+}
+
+.card{
+    padding:25px 40px;
+    background:#ff9933;
+    color:white;
+    border-radius:10px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.1);
+    background:#e67300;
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <h2>Incredible India</h2>
+    <ul>
+        <li><a onclick="showPage('home')">Home</a></li>
+        <li><a onclick="showPage('mumbai')">Mumbai</a></li>
+        <li><a onclick="showPage('nagpur')">Nagpur</a></li>
+        <li><a onclick="showPage('delhi')">Delhi</a></li>
+        <li><a onclick="showPage('kashmir')">Kashmir</a></li>
+    </ul>
+</header>
+
+<!-- HOME -->
+<section id="home">
+    <div class="hero">
+        <h1>Explore India 🇮🇳</h1>
+        <p>Click any destination to read about it</p>
+    </div>
+
+    <div class="cards">
+        <div class="card" onclick="showPage('mumbai')">Mumbai</div>
+        <div class="card" onclick="showPage('nagpur')">Nagpur</div>
+        <div class="card" onclick="showPage('delhi')">Delhi</div>
+        <div class="card" onclick="showPage('kashmir')">Kashmir</div>
+    </div>
+</section>
+
+<!-- MUMBAI -->
+<section id="mumbai" class="city">
+    <h1>Mumbai</h1>
+    <img src="https://source.unsplash.com/1000x500/?mumbai">
+    <p>Mumbai is the financial capital of India known for Marine Drive, Gateway of India and Bollywood culture.</p>
+</section>
+
+<!-- NAGPUR -->
+<section id="nagpur" class="city">
+    <h1>Nagpur</h1>
+    <img src="https://source.unsplash.com/1000x500/?nagpur">
+    <p>Nagpur is famous as the Orange City of India and known for Zero Mile center and peaceful lifestyle.</p>
+</section>
+
+<!-- DELHI -->
+<section id="delhi" class="city">
+    <h1>Delhi</h1>
+    <img src="https://source.unsplash.com/1000x500/?india-gate">
+    <p>Delhi is India's capital city rich in history with Red Fort, India Gate and delicious street food.</p>
+</section>
+
+<!-- KASHMIR -->
+<section id="kashmir" class="city">
+    <h1>Kashmir</h1>
+    <img src="https://source.unsplash.com/1000x500/?kashmir,mountains">
+    <p>Kashmir is called Heaven on Earth with snow mountains, Dal Lake and breathtaking valleys.</p>
+</section>
+
+<script>
+function showPage(page){
+
+    document.getElementById("home").style.display="none";
+
+    let cities=document.querySelectorAll(".city");
+    cities.forEach(c=>c.style.display="none");
+
+    if(page==="home"){
+        document.getElementById("home").style.display="block";
+    }else{
+        document.getElementById(page).style.display="block";
+    }
+}
+</script>
+
+</body>
+</html>
+

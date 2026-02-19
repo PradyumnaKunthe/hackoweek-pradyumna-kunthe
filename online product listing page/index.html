@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ShopEasy - Product Listing</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>🛒 ShopEasy</h1>
+    <input type="text" id="search" placeholder="Search products..." onkeyup="searchProduct()">
+</header>
+
+<div class="filters">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('electronics')">Electronics</button>
+    <button onclick="filterCategory('fashion')">Fashion</button>
+    <button onclick="filterCategory('books')">Books</button>
+</div>
+
+<div class="products" id="productContainer">
+
+    <div class="card electronics">
+        <img src="https://source.unsplash.com/300x250/?laptop">
+        <h3>HP Laptop</h3>
+        <p class="price">₹55,000</p>
+    </div>
+
+    <div class="card fashion">
+        <img src="https://source.unsplash.com/300x250/?shoes">
+        <h3>Running Shoes</h3>
+        <p class="price">₹2,499</p>
+    </div>
+
+    <div class="card books">
+        <img src="https://source.unsplash.com/300x250/?book">
+        <h3>Programming Book</h3>
+        <p class="price">₹599</p>
+    </div>
+
+    <div class="card electronics">
+        <img src="https://source.unsplash.com/300x250/?headphones">
+        <h3>Wireless Headphones</h3>
+        <p class="price">₹1,999</p>
+    </div>
+
+    <div class="card fashion">
+        <img src="https://source.unsplash.com/300x250/?tshirt">
+        <h3>Cotton T-Shirt</h3>
+        <p class="price">₹799</p>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
