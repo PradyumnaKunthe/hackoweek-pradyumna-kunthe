@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern To-Do Hub</title>
+  <meta name="description" content="A beautiful and responsive full-stack To-Do application.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Phosphor Icons for sleek modern SVG icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+  <div class="app-container">
+    <header class="header">
+      <div class="header-content">
+        <h1>To-Do Hub</h1>
+        <p>Organize your day with elegance.</p>
+      </div>
+      <div class="theme-toggle">
+         <i class="ph ph-moon"></i>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="card input-card">
+        <form id="task-form">
+          <div class="input-wrapper">
+            <i class="ph ph-pencil-simple input-icon"></i>
+            <input type="text" id="task-input" placeholder="What needs to be done?" autocomplete="off" required>
+          </div>
+          <button type="submit" class="btn-primary" aria-label="Add task">
+            <i class="ph ph-plus-circle"></i> Add Task
+          </button>
+        </form>
+      </div>
+
+      <div class="card tasks-card">
+        <div class="filters">
+          <button class="filter-btn active" data-filter="All">All Tasks</button>
+          <button class="filter-btn" data-filter="Pending">Pending</button>
+          <button class="filter-btn" data-filter="Completed">Completed</button>
+        </div>
+
+        <div class="task-list-container">
+          <ul id="task-list" class="task-list">
+            <!-- Loading State -->
+            <li class="status-state">
+              <i class="ph ph-spinner ph-spin"></i>
+              <p>Loading your tasks...</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- Edit Task Modal -->
+  <div id="edit-modal" class="modal">
+    <div class="modal-content card">
+      <h2>Edit Task</h2>
+      <form id="edit-form">
+        <input type="hidden" id="edit-task-id">
+        <input type="text" id="edit-task-input" required autocomplete="off">
+        <div class="modal-actions">
+          <button type="button" id="cancel-edit" class="btn-secondary">Cancel</button>
+          <button type="submit" class="btn-primary">Save Changes</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
