@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A visually stunning modern image gallery with filtering and lightbox features.">
+  <title>Lumina Gallery</title>
+  
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  
+  <!-- Google Fonts: Outfit -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">
+      <i class="fa-solid fa-camera-retro"></i>
+      <h1>Lumina</h1>
+    </div>
+    
+    <!-- Filter Buttons -->
+    <nav class="filters" id="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="nature">Nature</button>
+      <button class="filter-btn" data-filter="architecture">Architecture</button>
+      <button class="filter-btn" data-filter="animals">Animals</button>
+    </nav>
+  </header>
+
+  <!-- Gallery Grid -->
+  <main>
+    <div class="gallery-grid" id="gallery-grid">
+      <!-- Images injected via JS -->
+    </div>
+  </main>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox-overlay" id="lightbox-overlay"></div>
+    <div class="lightbox-content">
+      <button class="lightbox-btn close-btn" id="close-btn" aria-label="Close Lightbox">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      
+      <button class="lightbox-btn nav-btn prev-btn" id="prev-btn" aria-label="Previous Image">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      
+      <div class="image-wrapper">
+        <img src="" alt="" id="lightbox-img">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
+      </div>
+
+      <button class="lightbox-btn nav-btn next-btn" id="next-btn" aria-label="Next Image">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
+
+      <button class="lightbox-btn download-btn" id="download-btn" aria-label="Download Image">
+        <i class="fa-solid fa-download"></i>
+      </button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
