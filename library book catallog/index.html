@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Catalogue</title>
+    <meta name="description" content="A modern, responsive library catalogue to manage your books.">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container header-container">
+            <h1 class="logo">📚 Library<span>Log</span></h1>
+            <button id="theme-toggle" class="icon-btn" aria-label="Toggle Dark Mode">
+                <svg id="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path></svg>
+                <svg id="sun-icon" class="hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="controls">
+            <div class="search-bar">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                <input type="text" id="search-input" placeholder="Search by title or author...">
+            </div>
+            
+            <div class="filters">
+                <select id="category-filter" aria-label="Filter by category">
+                    <option value="All">All Categories</option>
+                    <option value="Fiction">Fiction</option>
+                    <option value="Science">Science</option>
+                    <option value="Technology">Technology</option>
+                    <option value="History">History</option>
+                    <option value="Biography">Biography</option>
+                    <option value="Other">Other</option>
+                </select>
+                
+                <select id="sort-select" aria-label="Sort books">
+                    <option value="default">Sort by</option>
+                    <option value="az">Title (A-Z)</option>
+                    <option value="za">Title (Z-A)</option>
+                    <option value="category">Category</option>
+                </select>
+
+                <button id="open-add-modal" class="btn primary-btn">+ Add Book</button>
+            </div>
+        </section>
+
+        <section id="books-grid" class="books-grid">
+            <!-- Books will be injected here via JS -->
+        </section>
+        
+        <div id="empty-state" class="empty-state hidden">
+            <div class="empty-icon">📖</div>
+            <h2>No books found</h2>
+            <p>Try adjusting your search or add a new book to the catalogue.</p>
+        </div>
+    </main>
+
+    <!-- Add Book Modal -->
+    <div id="add-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Add New Book</h2>
+                <button class="close-modal icon-btn">&times;</button>
+            </div>
+            <form id="add-book-form">
+                <div class="form-group">
+                    <label for="book-title">Book Title</label>
+                    <input type="text" id="book-title" required placeholder="e.g. The Clean Coder">
+                </div>
+                <div class="form-group">
+                    <label for="book-author">Author Name</label>
+                    <input type="text" id="book-author" required placeholder="e.g. Robert C. Martin">
+                </div>
+                <div class="form-group">
+                    <label for="book-category">Category</label>
+                    <select id="book-category" required>
+                        <option value="" disabled selected>Select a category</option>
+                        <option value="Fiction">Fiction</option>
+                        <option value="Science">Science</option>
+                        <option value="Technology">Technology</option>
+                        <option value="History">History</option>
+                        <option value="Biography">Biography</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="book-cover">Cover Image URL (Optional)</label>
+                    <input type="url" id="book-cover" placeholder="https://example.com/image.jpg">
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn secondary-btn close-modal">Cancel</button>
+                    <button type="submit" class="btn primary-btn">Add Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Book Details Modal -->
+    <div id="details-modal" class="modal hidden">
+        <div class="modal-content details-content">
+            <button class="close-modal icon-btn">&times;</button>
+            <div class="details-body" id="details-body">
+                <!-- Details injected via JS -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
