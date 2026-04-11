@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduSphere - Course Landing Page</title>
+    <!-- Modern Google Font: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">Edu<span class="highlight">Sphere</span></a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link">Home</a></li>
+                <li><a href="#courses" class="nav-link">Courses</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#contact" class="btn-outline nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero section">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn <span class="highlight">Web Development</span> Easily</h1>
+                <p class="hero-desc">Master the skills to build modern, responsive, and interactive websites from top industry experts. Start your journey today and unlock endless opportunities.</p>
+                <div class="hero-btns">
+                    <a href="#courses" class="btn-primary">Enroll Now</a>
+                    <a href="#about" class="btn-secondary">Learn More</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="glass-card">
+                    <i class="fas fa-code main-icon"></i>
+                    <div class="floating-badge badge-1"><i class="fab fa-html5"></i> HTML5</div>
+                    <div class="floating-badge badge-2"><i class="fab fa-css3-alt"></i> CSS3</div>
+                    <div class="floating-badge badge-3"><i class="fab fa-js"></i> JS ES6</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features section bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why Choose Us?</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-book-open"></i></div>
+                    <h3>Easy Learning</h3>
+                    <p>Bite-sized, step-by-step lessons designed for absolute beginners to seasoned professionals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-user-tie"></i></div>
+                    <h3>Expert Mentors</h3>
+                    <p>Learn from industry veterans who have real-world experience building scalable web applications.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3>Flexible Schedule</h3>
+                    <p>Study at your own pace. Access our entire premium curriculum anytime, from anywhere.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Courses</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="courses-grid">
+                <!-- Course 1 -->
+                <div class="course-card">
+                    <div class="course-img bg-gradient-1">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="tag tag-beginner">Beginner</span>
+                        <h3>HTML & CSS Foundations</h3>
+                        <p>Learn the fundamental building blocks of the web and craft stunning, responsive layouts.</p>
+                        <a href="#contact" class="course-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 2 -->
+                <div class="course-card">
+                    <div class="course-img bg-gradient-2">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="tag tag-intermediate">Intermediate</span>
+                        <h3>Modern JavaScript</h3>
+                        <p>Master ES6+, async/await, DOM manipulation, and build dynamic front-end applications.</p>
+                        <a href="#contact" class="course-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <!-- Course 3 -->
+                <div class="course-card">
+                    <div class="course-img bg-gradient-3">
+                        <i class="fas fa-layer-group"></i>
+                    </div>
+                    <div class="course-content">
+                        <span class="tag tag-advanced">Advanced</span>
+                        <h3>Full-Stack Architecture</h3>
+                        <p>Design scalable systems, APIs, and integrate popular front-end frameworks seamlessly.</p>
+                        <a href="#contact" class="course-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section bg-light">
+        <div class="container about-container">
+            <div class="about-image">
+                <!-- Using Unsplash placeholder -->
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Students learning together" class="rounded-img shadow-lg" loading="lazy">
+            </div>
+            <div class="about-content">
+                <h2>Empowering the Next Generation of Developers</h2>
+                <div class="underline align-left"></div>
+                <p>EduSphere was founded with a single mission: to make high-quality tech education accessible to everyone. We believe that learning to code should be an engaging, interactive, and rewarding experience, regardless of your background.</p>
+                <p>Our curriculum is continuously vetted and updated to reflect the latest industry standards. Join a growing community of passionate learners and transform your career path with us today.</p>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h4>50K+</h4>
+                        <span>Students</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>100+</h4>
+                        <span>Courses</span>
+                    </div>
+                    <div class="stat-item">
+                        <h4>4.9</h4>
+                        <span>Rating</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>We'd love to hear from you!</h3>
+                    <p>Have a question about our curriculum, pricing, or enterprise solutions? Our dedicated team is ready to answer all your questions.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Tech Avenue, Silicon Valley, CA</li>
+                        <li><i class="fas fa-envelope"></i> hello@edusphere.com</li>
+                        <li><i class="fas fa-phone"></i> +1 (555) 123-4567</li>
+                    </ul>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form id="contactForm" class="contact-form" novalidate>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" placeholder="John Doe">
+                            <span class="error-message" id="nameError">Name is required</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="john@example.com">
+                            <span class="error-message" id="emailError">Please enter a valid email address</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="How can we help you?"></textarea>
+                            <span class="error-message" id="messageError">Message is required</span>
+                        </div>
+                        <button type="submit" class="btn-primary w-100">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">Edu<span class="highlight">Sphere</span></a>
+                <p>Learn to code interactive, modern web applications with our easy-to-follow, project-based courses.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#hero">Home</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 EduSphere. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
