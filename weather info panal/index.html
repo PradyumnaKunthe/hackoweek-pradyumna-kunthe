@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Weather Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Outfit -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Floating Background Gradient Blobs -->
+    <div class="background-container">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Dark/Light Mode Toggle -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Toggle Dark Mode">
+        <i class="fa-solid fa-moon"></i>
+    </button>
+
+    <main class="container">
+        <div class="weather-card" id="weather-card">
+            <header class="search-section">
+                <div class="input-wrapper">
+                    <input type="text" id="city-input" placeholder="Search for a city..." autocomplete="off">
+                    <button id="search-btn" class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </header>
+
+            <div id="loading" class="loading">
+                <div class="spinner"></div>
+            </div>
+
+            <div id="error-message" class="error-message hidden">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <span>City not found.<br>Please try again.</span>
+            </div>
+
+            <div id="weather-info" class="weather-info hidden">
+                <div class="main-info">
+                    <div class="weather-icon-wrapper">
+                        <i id="weather-icon" class="fa-solid fa-sun weather-icon"></i>
+                    </div>
+                    <div class="temp-wrapper">
+                        <h1 id="temperature" class="temperature">--</h1>
+                        <span class="unit">°C</span>
+                    </div>
+                    <h2 id="city-name" class="city-name">--</h2>
+                    <p id="weather-desc" class="weather-desc">--</p>
+                </div>
+
+                <div class="details-grid">
+                    <div class="detail-card">
+                        <i class="fa-solid fa-droplet icon"></i>
+                        <div class="detail-info">
+                            <span class="label">Humidity</span>
+                            <span id="humidity" class="value">--%</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fa-solid fa-wind icon"></i>
+                        <div class="detail-info">
+                            <span class="label">Wind Speed</span>
+                            <span id="wind-speed" class="value">-- km/h</span>
+                        </div>
+                    </div>
+                    <div class="detail-card">
+                        <i class="fa-solid fa-gauge-high icon"></i>
+                        <div class="detail-info">
+                            <span class="label">Pressure</span>
+                            <span id="pressure" class="value">-- hPa</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
