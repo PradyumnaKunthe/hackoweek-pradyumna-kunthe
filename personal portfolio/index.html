@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio | Premium Portfolio</title>
+    <!-- Use Outfit font for a very modern SaaS look -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Animated Shapes -->
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">Port<span>folio.</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="theme-toggle" class="theme-btn" aria-label="Toggle Theme">
+                <span class="icon-sun">☀️</span>
+                <span class="icon-moon">🌙</span>
+            </button>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header id="hero" class="hero section reveal">
+        <div class="hero-content glass-panel">
+            <p class="greeting">Hello, I am</p>
+            <h1 class="name">Pradyumna <span>kunthe</span></h1>
+            <h2 class="tagline">Student | Developer | Problem Solver</h2>
+            <p class="intro">
+                Passionate about crafting premium web experiences. I blend robust code with aesthetic design to deliver
+                high-quality, efficient solutions.
+            </p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Hire Me</a>
+                <a href="#projects" class="btn btn-secondary">View Work</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about section reveal">
+        <h2 class="section-title">About <span>Me</span></h2>
+        <div class="about-container glass-card tilt">
+            <div class="about-text">
+                <p>
+                    I am a dedicated student at <strong>Symbiosis International University</strong>, possessing a strong
+                    academic foundation.
+                    I am highly motivated, disciplined, and recognize the importance of delivering exceptional results
+                    efficiently.
+                </p>
+                <p>
+                    With an insatiable curiosity and a quick learning curve, I thrive when tackling complex problems and
+                    transforming ideas into stunning realities. My expertise lies in building interactive and scalable
+                    web products from scratch without relying on bloated frameworks.
+                </p>
+                <p class="highlight-text">
+                    I believe in quality, efficiency, and writing clean code that looks as good under the hood as it
+                    does on the screen.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section reveal">
+        <h2 class="section-title">My <span>Skills</span></h2>
+        <div class="skills-grid">
+            <div class="skill-card glass-card tilt">
+                <div class="skill-icon">🌐</div>
+                <h3>HTML</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 95%;"></div>
+                </div>
+            </div>
+            <div class="skill-card glass-card tilt">
+                <div class="skill-icon">🎨</div>
+                <h3>CSS</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 90%;"></div>
+                </div>
+            </div>
+            <div class="skill-card glass-card tilt">
+                <div class="skill-icon">⚡</div>
+                <h3>JavaScript</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="--target-width: 85%;"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section reveal">
+        <h2 class="section-title">Featured <span>Projects</span></h2>
+        <div class="projects-grid">
+            <div class="project-card glass-card tilt">
+                <div class="project-img placeholder-gradient-1"></div>
+                <div class="project-info">
+                    <h3>Fest Registration Form</h3>
+                    <p>A multi-step, premium, glassmorphism registration experience designed for collegiate events.
+                        Real-time validation included.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card tilt">
+                <div class="project-img placeholder-gradient-2"></div>
+                <div class="project-info">
+                    <h3>Image Gallery</h3>
+                    <p>A masonry grid image gallery featuring an elegant lightbox, smooth transitions, and seamless
+                        drag-and-drop integration.</p>
+                </div>
+            </div>
+            <div class="project-card glass-card tilt">
+                <div class="project-img placeholder-gradient-3"></div>
+                <div class="project-info">
+                    <h3>Weather Panel</h3>
+                    <p>An aesthetic, real-time weather tracking dashboard showcasing dynamic gradients, geographical
+                        integration, and smooth API fetches.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements section reveal">
+        <h2 class="section-title">Core <span>Strengths</span></h2>
+        <div class="achievements-list">
+            <div class="achievement-item glass-bubble">
+                <span class="icon">🎓</span>
+                <h4>Academic Excellence</h4>
+                <p>Consistently strong performer at Symbiosis International University.</p>
+            </div>
+            <div class="achievement-item glass-bubble">
+                <span class="icon">🎯</span>
+                <h4>Task Efficiency</h4>
+                <p>Highly capable of handling multifaceted tasks efficiently and meeting deadlines.</p>
+            </div>
+            <div class="achievement-item glass-bubble">
+                <span class="icon">💪</span>
+                <h4>Discipline</h4>
+                <p>A disciplined, motivated approach allowing for quick learning and adaptation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section reveal">
+        <h2 class="section-title">Get In <span>Touch</span></h2>
+        <div class="contact-container glass-card">
+            <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" name="name" required placeholder=" ">
+                    <label for="name">Your Name</label>
+                    <span class="error-msg">Please enter your name.</span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" name="email" required placeholder=" ">
+                    <label for="email">Your Email</label>
+                    <span class="error-msg">Please enter a valid email address.</span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" name="message" required placeholder=" " rows="5"></textarea>
+                    <label for="message">Your Message</label>
+                    <span class="error-msg">Please enter your message.</span>
+                </div>
+                <button type="submit" class="btn btn-primary submit-btn">
+                    <span>Send Message</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 John Doe. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="GitHub">GitHub</a>
+                <a href="#" aria-label="LinkedIn">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
