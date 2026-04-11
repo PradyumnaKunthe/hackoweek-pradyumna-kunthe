@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enthusia Fest 2025 – College Registration</title>
+  <meta name="description"
+    content="Register for Enthusia Fest 2025 – The ultimate college cultural and technical festival. Secure your spot now!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Animated Background Canvas -->
+  <canvas id="bg-canvas"></canvas>
+
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle" title="Toggle Dark/Light Mode" aria-label="Toggle theme">
+    <i class="fas fa-moon" id="themeIcon"></i>
+  </button>
+
+  <!-- Main Wrapper -->
+  <div class="page-wrapper">
+
+    <!-- Header -->
+    <header class="fest-header">
+      <div class="header-badge">✦ 2025 ✦</div>
+      <h1 class="fest-title">
+        <span class="title-glow">Enthusia</span>
+        <span class="title-sub">FEST</span>
+      </h1>
+      <p class="fest-tagline">Where Talent Meets Opportunity</p>
+      <!-- Progress Steps -->
+      <div class="progress-steps" id="progressSteps">
+        <div class="step active" data-step="1">
+          <div class="step-circle"><i class="fas fa-user"></i></div>
+          <span>Personal</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="2">
+          <div class="step-circle"><i class="fas fa-school"></i></div>
+          <span>Academic</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="3">
+          <div class="step-circle"><i class="fas fa-star"></i></div>
+          <span>Events</span>
+        </div>
+        <div class="step-line"></div>
+        <div class="step" data-step="4">
+          <div class="step-circle"><i class="fas fa-check"></i></div>
+          <span>Submit</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Registration Form Card -->
+    <main class="form-container">
+      <form id="registrationForm" novalidate autocomplete="off">
+
+        <!-- ── STEP 1: Personal Info ── -->
+        <section class="form-step active" data-step="1" id="step1">
+          <div class="step-header">
+            <div class="step-icon"><i class="fas fa-user-circle"></i></div>
+            <div>
+              <h2 class="step-title">Personal Information</h2>
+              <p class="step-desc">Tell us a little about yourself</p>
+            </div>
+          </div>
+
+          <!-- Full Name -->
+          <div class="field-group" id="fg-name">
+            <div class="input-wrapper">
+              <i class="fas fa-user input-icon"></i>
+              <input type="text" id="fullName" name="fullName" class="form-input" placeholder=" " autocomplete="off" />
+              <label for="fullName" class="floating-label">Full Name</label>
+              <span class="input-focus-bar"></span>
+            </div>
+            <span class="error-msg" id="err-name"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Email -->
+          <div class="field-group" id="fg-email">
+            <div class="input-wrapper">
+              <i class="fas fa-envelope input-icon"></i>
+              <input type="email" id="email" name="email" class="form-input" placeholder=" " autocomplete="off" />
+              <label for="email" class="floating-label">Email Address</label>
+              <span class="input-focus-bar"></span>
+            </div>
+            <span class="error-msg" id="err-email"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="field-group" id="fg-phone">
+            <div class="input-wrapper">
+              <i class="fas fa-phone input-icon"></i>
+              <input type="tel" id="phone" name="phone" class="form-input" placeholder=" " maxlength="10"
+                autocomplete="off" />
+              <label for="phone" class="floating-label">Phone Number</label>
+              <span class="input-focus-bar"></span>
+            </div>
+            <span class="error-msg" id="err-phone"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Gender -->
+          <div class="field-group" id="fg-gender">
+            <label class="group-label"><i class="fas fa-venus-mars"></i> Gender</label>
+            <div class="radio-group">
+              <label class="radio-card">
+                <input type="radio" name="gender" value="male" />
+                <span class="radio-custom"><i class="fas fa-mars"></i></span>
+                <span>Male</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="gender" value="female" />
+                <span class="radio-custom"><i class="fas fa-venus"></i></span>
+                <span>Female</span>
+              </label>
+              <label class="radio-card">
+                <input type="radio" name="gender" value="other" />
+                <span class="radio-custom"><i class="fas fa-genderless"></i></span>
+                <span>Other</span>
+              </label>
+            </div>
+            <span class="error-msg" id="err-gender"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <div class="step-nav">
+            <div></div>
+            <button type="button" class="btn btn-next" onclick="goToStep(2)">
+              Next <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ── STEP 2: Academic Info ── -->
+        <section class="form-step" data-step="2" id="step2">
+          <div class="step-header">
+            <div class="step-icon"><i class="fas fa-graduation-cap"></i></div>
+            <div>
+              <h2 class="step-title">Academic Details</h2>
+              <p class="step-desc">Your college and course information</p>
+            </div>
+          </div>
+
+          <!-- College Name -->
+          <div class="field-group" id="fg-college">
+            <div class="input-wrapper">
+              <i class="fas fa-university input-icon"></i>
+              <input type="text" id="collegeName" name="collegeName" class="form-input" placeholder=" "
+                autocomplete="off" />
+              <label for="collegeName" class="floating-label">College Name</label>
+              <span class="input-focus-bar"></span>
+            </div>
+            <span class="error-msg" id="err-college"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Branch / Department -->
+          <div class="field-group" id="fg-branch">
+            <div class="input-wrapper select-wrapper">
+              <i class="fas fa-code-branch input-icon"></i>
+              <select id="branch" name="branch" class="form-input form-select">
+                <option value="" disabled selected>Select Branch / Department</option>
+                <option value="cse">Computer Science & Engineering</option>
+                <option value="it">Information Technology</option>
+                <option value="ece">Electronics & Communication</option>
+                <option value="eee">Electrical & Electronics</option>
+                <option value="mech">Mechanical Engineering</option>
+                <option value="civil">Civil Engineering</option>
+                <option value="chem">Chemical Engineering</option>
+                <option value="bio">Biotechnology</option>
+                <option value="arch">Architecture</option>
+                <option value="mba">MBA / Management</option>
+                <option value="arts">Arts & Humanities</option>
+                <option value="science">Science</option>
+                <option value="other">Other</option>
+              </select>
+              <i class="fas fa-chevron-down select-arrow"></i>
+            </div>
+            <span class="error-msg" id="err-branch"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Year -->
+          <div class="field-group" id="fg-year">
+            <label class="group-label"><i class="fas fa-calendar-alt"></i> Year of Study</label>
+            <div class="year-group">
+              <label class="year-card">
+                <input type="radio" name="year" value="1" />
+                <span class="year-num">1<sup>st</sup></span>
+                <span class="year-label">Year</span>
+              </label>
+              <label class="year-card">
+                <input type="radio" name="year" value="2" />
+                <span class="year-num">2<sup>nd</sup></span>
+                <span class="year-label">Year</span>
+              </label>
+              <label class="year-card">
+                <input type="radio" name="year" value="3" />
+                <span class="year-num">3<sup>rd</sup></span>
+                <span class="year-label">Year</span>
+              </label>
+              <label class="year-card">
+                <input type="radio" name="year" value="4" />
+                <span class="year-num">4<sup>th</sup></span>
+                <span class="year-label">Year</span>
+              </label>
+            </div>
+            <span class="error-msg" id="err-year"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-prev" onclick="goToStep(1)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="btn btn-next" onclick="goToStep(3)">
+              Next <i class="fas fa-arrow-right"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ── STEP 3: Events & Extras ── -->
+        <section class="form-step" data-step="3" id="step3">
+          <div class="step-header">
+            <div class="step-icon"><i class="fas fa-fire"></i></div>
+            <div>
+              <h2 class="step-title">Event Selection</h2>
+              <p class="step-desc">Pick your battles — select all events you wish to participate in</p>
+            </div>
+          </div>
+
+          <!-- Events -->
+          <div class="field-group" id="fg-events">
+            <label class="group-label"><i class="fas fa-list-check"></i> Choose Events (select at least one)</label>
+            <div class="events-grid">
+              <label class="event-card">
+                <input type="checkbox" name="events" value="dance" />
+                <div class="event-content">
+                  <span class="event-icon">💃</span>
+                  <span class="event-name">Dance</span>
+                  <span class="event-tag">Cultural</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="coding" />
+                <div class="event-content">
+                  <span class="event-icon">💻</span>
+                  <span class="event-name">Coding</span>
+                  <span class="event-tag">Technical</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="gaming" />
+                <div class="event-content">
+                  <span class="event-icon">🎮</span>
+                  <span class="event-name">Gaming</span>
+                  <span class="event-tag">Sports</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="music" />
+                <div class="event-content">
+                  <span class="event-icon">🎵</span>
+                  <span class="event-name">Music</span>
+                  <span class="event-tag">Cultural</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="photography" />
+                <div class="event-content">
+                  <span class="event-icon">📸</span>
+                  <span class="event-name">Photography</span>
+                  <span class="event-tag">Creative</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="debate" />
+                <div class="event-content">
+                  <span class="event-icon">🎤</span>
+                  <span class="event-name">Debate</span>
+                  <span class="event-tag">Literary</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="quiz" />
+                <div class="event-content">
+                  <span class="event-icon">🧠</span>
+                  <span class="event-name">Quiz</span>
+                  <span class="event-tag">Academic</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="art" />
+                <div class="event-content">
+                  <span class="event-icon">🎨</span>
+                  <span class="event-name">Art & Design</span>
+                  <span class="event-tag">Creative</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="hackathon" />
+                <div class="event-content">
+                  <span class="event-icon">⚡</span>
+                  <span class="event-name">Hackathon</span>
+                  <span class="event-tag">Technical</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+              <label class="event-card">
+                <input type="checkbox" name="events" value="drama" />
+                <div class="event-content">
+                  <span class="event-icon">🎭</span>
+                  <span class="event-name">Drama</span>
+                  <span class="event-tag">Cultural</span>
+                </div>
+                <div class="event-check"><i class="fas fa-check"></i></div>
+              </label>
+            </div>
+            <span class="error-msg" id="err-events"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- ID Card Upload -->
+          <div class="field-group" id="fg-idcard">
+            <label class="group-label"><i class="fas fa-id-card"></i> Upload College ID Card</label>
+            <div class="file-drop-zone" id="fileDropZone">
+              <input type="file" id="idCard" name="idCard" class="file-input" accept=".jpg,.jpeg,.png,.pdf" />
+              <div class="file-drop-content" id="fileDropContent">
+                <div class="file-icon"><i class="fas fa-cloud-upload-alt"></i></div>
+                <p class="file-main">Drag & drop or <span class="file-browse">browse file</span></p>
+                <p class="file-hint">JPG, PNG or PDF — Max 5 MB</p>
+              </div>
+              <div class="file-preview" id="filePreview" style="display:none">
+                <i class="fas fa-file-check file-preview-icon"></i>
+                <div class="file-preview-info">
+                  <span id="fileName" class="file-name"></span>
+                  <span id="fileSize" class="file-size"></span>
+                </div>
+                <button type="button" class="file-remove" id="fileRemove" title="Remove file"><i
+                    class="fas fa-times"></i></button>
+              </div>
+            </div>
+            <span class="error-msg" id="err-idcard"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <!-- Message -->
+          <div class="field-group" id="fg-message">
+            <div class="input-wrapper">
+              <i class="fas fa-comment-dots input-icon textarea-icon"></i>
+              <textarea id="message" name="message" class="form-input form-textarea" placeholder=" "
+                rows="4"></textarea>
+              <label for="message" class="floating-label">Message / Comments (optional)</label>
+              <span class="input-focus-bar"></span>
+            </div>
+            <span class="char-count" id="charCount">0 / 300</span>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-prev" onclick="goToStep(2)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="button" class="btn btn-next" onclick="goToStep(4)">
+              Preview <i class="fas fa-eye"></i>
+            </button>
+          </div>
+        </section>
+
+        <!-- ── STEP 4: Preview & Submit ── -->
+        <section class="form-step" data-step="4" id="step4">
+          <div class="step-header">
+            <div class="step-icon"><i class="fas fa-clipboard-check"></i></div>
+            <div>
+              <h2 class="step-title">Review & Submit</h2>
+              <p class="step-desc">Double-check your details before registering</p>
+            </div>
+          </div>
+
+          <div class="preview-card" id="previewCard">
+            <!-- filled by JS -->
+          </div>
+
+          <div class="terms-row">
+            <label class="checkbox-label">
+              <input type="checkbox" id="termsCheck" name="terms" />
+              <span class="checkbox-custom"></span>
+              I agree to the <a href="#" class="terms-link">Terms & Conditions</a> and consent to data processing.
+            </label>
+            <span class="error-msg" id="err-terms"><i class="fas fa-circle-exclamation"></i> <span></span></span>
+          </div>
+
+          <div class="step-nav">
+            <button type="button" class="btn btn-prev" onclick="goToStep(3)">
+              <i class="fas fa-arrow-left"></i> Back
+            </button>
+            <button type="submit" class="btn btn-submit" id="submitBtn">
+              <span class="btn-text"><i class="fas fa-paper-plane"></i> Register Now</span>
+              <span class="btn-loader" style="display:none"><i class="fas fa-spinner fa-spin"></i> Processing...</span>
+              <div class="btn-glow"></div>
+            </button>
+          </div>
+        </section>
+
+      </form>
+    </main>
+
+    <footer class="fest-footer">
+      <p>© 2025 Enthusia Fest &nbsp;·&nbsp; Made with <i class="fas fa-heart" style="color:#f43f5e"></i> for college
+        culture</p>
+    </footer>
+  </div>
+
+  <!-- ── Success Modal ── -->
+  <div class="modal-overlay" id="successModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <div class="modal-confetti" id="confettiContainer"></div>
+      <div class="modal-icon">
+        <svg viewBox="0 0 52 52" class="checkmark-svg">
+          <circle cx="26" cy="26" r="25" fill="none" class="checkmark-circle" />
+          <path d="M14 27l8 8 16-16" fill="none" class="checkmark-path" />
+        </svg>
+      </div>
+      <h2 class="modal-title" id="modalTitle">You're Registered! 🎉</h2>
+      <p class="modal-subtitle">Welcome to Enthusia Fest 2025. Your spot is confirmed!</p>
+      <div class="modal-summary" id="modalSummary"></div>
+      <div class="modal-actions">
+        <button class="btn btn-outline" id="downloadBtn"><i class="fas fa-download"></i> Download Summary</button>
+        <button class="btn btn-submit" id="closeModalBtn">
+          <span>Done <i class="fas fa-check"></i></span>
+          <div class="btn-glow"></div>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
